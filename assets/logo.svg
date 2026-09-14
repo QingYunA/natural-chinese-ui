@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <defs>
+    <!-- Background: Deep Obsidian Zinc -->
+    <linearGradient id="tileBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="50%" stop-color="#121215" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+
+    <!-- Top Specular Sheen (macOS App Icon Polish) -->
+    <linearGradient id="topSheen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Precision Chamfer Rim (1.2px) -->
+    <linearGradient id="tileBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#71717a" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#3f3f46" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#27272a" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Warm Vermilion & Amber Coral Gradient (Natural Chinese Ink & Modern UI) -->
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="50%" stop-color="#fb7185" />
+      <stop offset="100%" stop-color="#fb923c" />
+    </linearGradient>
+
+    <!-- Clean Crisp UI Silver Gradient -->
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e4e4e7" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Squircle Base Container (macOS R=52px) -->
+  <rect x="12" y="12" width="232" height="232" rx="52" fill="url(#tileBg)" />
+  <!-- Top Surface Sheen -->
+  <rect x="12" y="12" width="232" height="116" rx="52" fill="url(#topSheen)" />
+  <!-- Precision Rim -->
+  <rect x="12" y="12" width="232" height="232" rx="52" fill="none" stroke="url(#tileBorder)" stroke-width="1.2" />
+
+  <!-- 2. Modern Centerpiece: UI Dialogue / Document Frame + Pure Chinese Character '文' Geometry -->
+  <g transform="translate(128, 128)">
+    <!-- Modern Minimalist Card/Window Accent -->
+    <rect x="-68" y="-68" width="136" height="136" rx="24" fill="none" stroke="#27272a" stroke-width="6" />
+    
+    <!-- Top UI Card Dots -->
+    <circle cx="-42" cy="-46" r="4.5" fill="#ef4444" />
+    <circle cx="-26" cy="-46" r="4.5" fill="#f59e0b" />
+    <circle cx="-10" cy="-46" r="4.5" fill="#10b981" />
+
+    <!-- Stylized Modern Geometric '文' (Character & Language) -->
+    <!-- Top Dot / Apex -->
+    <circle cx="0" cy="-22" r="7.5" fill="url(#brandGrad)" />
+    
+    <!-- Horizontal Crossbar -->
+    <rect x="-44" y="-7" width="88" height="11" rx="5.5" fill="url(#silverGrad)" />
+    
+    <!-- Left Sweeping Stroke (撇) -->
+    <path d="M -8 11 Q -24 35 -40 50" 
+          fill="none" 
+          stroke="url(#brandGrad)" 
+          stroke-width="11" 
+          stroke-linecap="round" />
+          
+    <!-- Right Downward Stroke (捺) -->
+    <path d="M 6 11 Q 20 30 42 50" 
+          fill="none" 
+          stroke="url(#brandGrad)" 
+          stroke-width="11" 
+          stroke-linecap="round" />
+  </g>
+</svg>

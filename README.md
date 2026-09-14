@@ -1,13 +1,35 @@
+<div align="center">
+
+<img src="./assets/logo.svg" width="72" height="72" alt="natural-chinese-ui logo">
+
 # natural-chinese-ui
 
-让 AI 用简单务实的中文写软件命名、网页标题和界面文案。
+<p>
+  <strong>让 AI 用简单务实的中文写软件命名、网页标题和界面文案。</strong><br>
+  去掉假大空后缀、硬凑对联与戏精微文案。
+</p>
 
-[![skills.sh](https://img.shields.io/badge/skills.sh-npx%20skills%20add%20QingYunA%2Fnatural--chinese--ui-10b981?style=flat&logo=npm)](https://skills.sh)
-[![License: MIT](https://img.shields.io/badge/License-MIT-18181b.svg?style=flat)](./LICENSE)
+<p>
+  <a href="https://skills.sh"><img src="https://img.shields.io/badge/skills.sh-npx%20skills%20add%20QingYunA%2Fnatural--chinese--ui-10b981?style=flat&logo=npm" alt="skills.sh install"></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-18181b?style=flat" alt="License"></a>
+  <a href="https://github.com/QingYunA/natural-chinese-ui/stargazers"><img src="https://img.shields.io/github/stars/QingYunA/natural-chinese-ui?style=flat&logo=github&color=18181b" alt="Stars"></a>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat" alt="PRs Welcome">
+</p>
+
+<p>
+  <a href="#-安装使用">安装使用</a> ·
+  <a href="#-为什么做这个">为什么做这个</a> ·
+  <a href="#-常见对照">常见对照</a> ·
+  <a href="#-核心规则">核心规则</a> ·
+  <a href="#-词汇对照">词汇对照</a> ·
+  <a href="#-自检清单">自检清单</a>
+</p>
+
+</div>
 
 ---
 
-## 安装
+## 📦 安装使用
 
 推荐直接通过 `skills` 安装到你的编程 Agent（支持 Claude Code, Cursor, Codex 等）：
 
@@ -19,13 +41,27 @@ npx skills add QingYunA/natural-chinese-ui
 npx skills add QingYunA/natural-chinese-ui -g
 ```
 
-其他工具接入：
-- **Cursor / Windsurf**：把 [`rules/natural-chinese-ui.mdc`](./rules/natural-chinese-ui.mdc) 拷到项目 `.cursor/rules/` 目录下。
-- **ChatGPT / Claude 网页端**：直接把 [`prompts/system-prompt.md`](./prompts/system-prompt.md) 的内容贴进系统提示词（Custom Instructions）。
+<details>
+<summary><strong>其他工具接入方式（Cursor / Windsurf / 网页端）</strong></summary>
+
+### 1. Cursor / Windsurf
+把仓库中的 [`rules/natural-chinese-ui.mdc`](./rules/natural-chinese-ui.mdc) 拷贝到你的项目 `.cursor/rules/` 目录下即可。
+
+### 2. ChatGPT / Claude 网页端
+直接把 [`prompts/system-prompt.md`](./prompts/system-prompt.md) 的纯文本内容复制进自定义指令（Custom Instructions）或系统提示词。
+
+### 3. Antigravity / Google Agentic IDE
+在项目根目录运行：
+```bash
+mkdir -p .agents/skills/natural-chinese-ui
+curl -sSL https://raw.githubusercontent.com/QingYunA/natural-chinese-ui/main/SKILL.md -o .agents/skills/natural-chinese-ui/SKILL.md
+```
+
+</details>
 
 ---
 
-## 为什么做这个
+## 💡 为什么做这个
 
 让 AI 写前端页面或小工具时，它经常会用一些很别扭的中文：
 
@@ -39,7 +75,7 @@ npx skills add QingYunA/natural-chinese-ui -g
 
 ---
 
-## 常见对照
+## ⚡ 常见对照
 
 | 场景 | AI 常见写法（避免） | 正常写法（推荐） | 说明 |
 | :--- | :--- | :--- | :--- |
@@ -58,7 +94,7 @@ npx skills add QingYunA/natural-chinese-ui -g
 
 ---
 
-## 核心规则
+## 🎯 核心规则
 
 ### 1. 名字要实，去掉多余后缀
 是个什么东西就叫什么东西，不要动不动加“工坊”、“实验室”、“矩阵”、“魔方”、“空间”、“引擎”。
@@ -88,20 +124,20 @@ npx skills add QingYunA/natural-chinese-ui -g
 
 ---
 
-## 词汇对照
+## 📕 词汇对照
 
-- **不要用**：工坊、实验室、矩阵、魔方、空间、引擎、神器、生成仪、美化器、殿堂
+- **不要用**：工坊、实验室、矩阵、魔方、空间、引擎、神器、生成仪、美化器、殿堂  
   **建议用**：工具、生成器、转换器、计算器、时钟、配色表，或者直接用功能名本身
-- **不要用**：随机赋诗、碰碰运气、点亮灵感、即刻启程、开启之旅、注入灵魂
+- **不要用**：随机赋诗、碰碰运气、点亮灵感、即刻启程、开启之旅、注入灵魂  
   **建议用**：换一个、换一首、开始、格式化、重置、悔棋
-- **不要用**：沉浸式、多维赋能、一站式、闭环、极致、纯粹
+- **不要用**：沉浸式、多维赋能、一站式、闭环、极致、纯粹  
   **建议用**：直接删掉，换成支持什么格式、跑得多快等具体参数
-- **不要用**：少侠、阁下、胜天半子、佳句拓印、星球迷路
+- **不要用**：少侠、阁下、胜天半子、佳句拓印、星球迷路  
   **建议用**：黑棋获胜、已复制、网络连接失败
 
 ---
 
-## 自检清单
+## 🔍 自检清单
 
 写完文案后，拿这几个问题看一眼：
 
@@ -113,10 +149,10 @@ npx skills add QingYunA/natural-chinese-ui -g
 
 ---
 
-## 参与贡献
+## 🤝 参与贡献
 
 如果你在日常开发中遇到了离谱的 AI 中文文案，欢迎提 Issue 或 PR 补充反例与对照。
 
-## 开源协议
+## 📄 开源协议
 
-[MIT](./LICENSE)
+本项目采用 [MIT License](./LICENSE) 开源。
