@@ -1,23 +1,23 @@
 <div align="center">
 
-<img src="./assets/logo.svg" width="72" height="72" alt="natural-chinese-ui logo">
+<img src="./assets/logo.svg" width="72" height="72" alt="natural-chinese logo">
 
-# natural-chinese-ui
+# natural-chinese（好好说话）
 
 <p>
   <strong>让 AI 用简单务实的中文写软件命名、网页标题和界面文案。</strong><br>
-  停止神经病一样的后缀、凑对联与奇葩戏精文案....
+  停止神经病一样的后缀、凑对联与奇葩戏精文案。在 Agent 中输入 <code>/好好说话</code> 直接调用。
 </p>
 
 <p>
-  <a href="https://skills.sh"><img src="https://img.shields.io/badge/skills.sh-npx%20skills%20add%20QingYunA%2Fnatural--chinese--ui-10b981?style=flat&logo=npm" alt="skills.sh install"></a>
+  <a href="https://skills.sh"><img src="https://img.shields.io/badge/skills.sh-npx%20skills%20add%20QingYunA%2Fnatural--chinese-10b981?style=flat&logo=npm" alt="skills.sh install"></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-18181b?style=flat" alt="License"></a>
-  <a href="https://github.com/QingYunA/natural-chinese-ui/stargazers"><img src="https://img.shields.io/github/stars/QingYunA/natural-chinese-ui?style=flat&logo=github&color=18181b" alt="Stars"></a>
+  <a href="https://github.com/QingYunA/natural-chinese/stargazers"><img src="https://img.shields.io/github/stars/QingYunA/natural-chinese?style=flat&logo=github&color=18181b" alt="Stars"></a>
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat" alt="PRs Welcome">
 </p>
 
 <p>
-  <a href="#-安装使用">安装使用</a> ·
+  <a href="#-安装与调用">安装与调用</a> ·
   <a href="#-为什么做这个">为什么做这个</a> ·
   <a href="#-常见对照">常见对照</a> ·
   <a href="#-核心规则">核心规则</a> ·
@@ -29,23 +29,35 @@
 
 ---
 
-## 📦 安装使用
+## 📦 安装与调用
 
-推荐直接通过 `skills` 安装到你的编程 Agent（支持 Claude Code, Cursor, Codex 等）：
+### 一行命令安装（推荐）
+
+通过 `skills` 安装到你的编程 Agent（支持 Claude Code, Cursor, Codex 等）：
 
 ```bash
 # 安装到当前项目
-npx skills add QingYunA/natural-chinese-ui
+npx skills add QingYunA/natural-chinese
 
-# 全局安装
-npx skills add QingYunA/natural-chinese-ui -g
+# 全局安装到本机所有 Agent
+npx skills add QingYunA/natural-chinese -g
 ```
+
+### 如何触发
+
+安装完成后，在对话中直接输入斜杠命令即可触发：
+
+```text
+/好好说话 这段文案帮我改自然一点
+```
+
+也可以直接说：“中文说人话”、“文案不要工坊实验室”。
 
 <details>
 <summary><strong>其他工具接入方式（Cursor / Windsurf / 网页端）</strong></summary>
 
 ### 1. Cursor / Windsurf
-把仓库中的 [`rules/natural-chinese-ui.mdc`](./rules/natural-chinese-ui.mdc) 拷贝到你的项目 `.cursor/rules/` 目录下即可。
+把仓库中的 [`rules/好好说话.mdc`](./rules/好好说话.mdc) 拷贝到你的项目 `.cursor/rules/` 目录下即可。
 
 ### 2. ChatGPT / Claude 网页端
 直接把 [`prompts/system-prompt.md`](./prompts/system-prompt.md) 的纯文本内容复制进自定义指令（Custom Instructions）或系统提示词。
@@ -53,8 +65,8 @@ npx skills add QingYunA/natural-chinese-ui -g
 ### 3. Antigravity / Google Agentic IDE
 在项目根目录运行：
 ```bash
-mkdir -p .agents/skills/natural-chinese-ui
-curl -sSL https://raw.githubusercontent.com/QingYunA/natural-chinese-ui/main/SKILL.md -o .agents/skills/natural-chinese-ui/SKILL.md
+mkdir -p .agents/skills/好好说话
+curl -sSL https://raw.githubusercontent.com/QingYunA/natural-chinese/main/SKILL.md -o .agents/skills/好好说话/SKILL.md
 ```
 
 </details>
